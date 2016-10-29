@@ -1,8 +1,11 @@
-"use strict";
-var Artista = (function () {
-    function Artista() {
+var App = (function () {
+    function App() {
     }
-    return Artista;
+    App.prototype.main = function () {
+        var artista1 = new Artista();
+        artista1.presentarse();
+    };
+    return App;
 }());
-exports.Artista = Artista;
-//# sourceMappingURL=artista.model.js.map
+alert("Se ha cargado la aplicación");
+//# sourceMappingURL=app.js.map
