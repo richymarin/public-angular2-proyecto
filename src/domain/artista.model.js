@@ -1,11 +1,9 @@
-var App = (function () {
-    function App() {
+var Artista = (function () {
+    function Artista() {
     }
-    App.prototype.main = function () {
-        var artista1 = new Artista();
-        artista1.presentarse();
+    Artista.prototype.presentarse = function () {
+        alert("Hola soy : " + this.nombre);
     };
-    return App;
+    return Artista;
 }());
-alert("Se ha cargado la aplicación");
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=artista.model.js.map
