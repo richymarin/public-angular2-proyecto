@@ -1,0 +1,1 @@
+{"version":3,"file":"album.model.js","sourceRoot":"","sources":["album.model.ts"],"names":[],"mappings":"AAAA;IAMI,eAAY,MAAa,EAAE,gBAAqB;QAE5C,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;QACrB,IAAI,CAAC,gBAAgB,GAAG,gBAAgB,CAAC;QAEzC,IAAI,CAAC,YAAY,GAAG,IAAI,KAAK,EAAW,CAAC;IAC7C,CAAC;IAGL,YAAC;AAAD,CAAC,AAfD,IAeC"}

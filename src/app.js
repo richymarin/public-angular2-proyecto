@@ -1,18 +1,30 @@
-var App = (function () {
-    function App() {
+var Aplicacion = (function () {
+    function Aplicacion() {
+        this.albumList = new Array();
     }
-    App.prototype.constryctor = function () {
-        this.aritstaList = new Array();
+    Aplicacion.prototype.agregarAlbum = function () {
+        var inputAlbumNombre = document.getElementById("album_nombre");
+        var inputAlbumFechaLanzamiento = document.getElementById("album_fechaLanzamiento");
+        var nombreAlbum = inputAlbumNombre.value;
+        var fechaLanzamiento = new Date(inputAlbumFechaLanzamiento.value);
+        var nuevoAlbum = new Album(nombreAlbum, fechaLanzamiento);
+        this.albumList.push(nuevoAlbum);
+        alert("Album agregado con éxito");
     };
-    App.prototype.main = function () {
-        var artista1 = new Artista();
-        artista1.nombre = "Ricardo";
-        artista1.presentarse();
+    Aplicacion.prototype.listarAlbums = function () {
+        var tablaAlbumsElement = document.getElementById("table_albums");
+        var htmlTablaAlbums = "<tr><th>Nombre</th><th>Fecha de lanzamiento</th></tr>";
+        for (var i = 0; i < this.albumList.length; i++) {
+            htmlTablaAlbums = htmlTablaAlbums +
+                "<tr>" +
+                "<td>" + this.albumList[i].nombre + "</td>" +
+                "<td>" + this.albumList[i].fechaLanzamiento + "</td>" +
+                "</tr>";
+        }
+        tablaAlbumsElement.innerHTML = htmlTablaAlbums;
+        tablaAlbumsElement.style.visibility = "visible";
     };
-    App.prototype.crearartista = function () {
-        alert("Vamos a crear un artista con POO");
-    };
-    return App;
+    return Aplicacion;
 }());
-var app = new App;
+var app = new Aplicacion();
 //# sourceMappingURL=app.js.map
